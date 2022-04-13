@@ -3,8 +3,8 @@
 MAPPINGS_BIND_DIR=/home/wiremock-symlink/mappings/00-CUSTOM
 FILES_BIND_DIR=/home/wiremock-symlink/__files/dynamic
 
-ln -s /home/wiremock/mappings/ $MAPPINGS_BIND_DIR
-ln -s /home/wiremock/__files/ $FILES_BIND_DIR
+ln -s /home/wiremock-symlink/mount-target/mappings/ $MAPPINGS_BIND_DIR
+ln -s /home/wiremock-symlink/mount-target/__files/ $FILES_BIND_DIR
 
 # to change the default wiremock options use the environment variable  e.g. -e WIREMOCK_OPTS="--global-response-templating"
 echo ""

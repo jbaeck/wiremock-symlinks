@@ -9,6 +9,7 @@ COPY setup/scripts/wiremock/mappings/ mappings/99-IMAGE
 COPY setup/scripts/wiremock/__files/ __files/static
 
 RUN mkdir -p /var/wiremock/extensions && \
+    mkdir -p /home/wiremock-symlink/mount-target &&\
     chmod go=u -R /var/wiremock/extensions && \
     chmod go=u -R /home/wiremock-symlink && \
     chmod +x /run.sh
