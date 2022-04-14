@@ -5,7 +5,7 @@ Symlink to a folder not under the workdir will fail.
 
 ## Build and run the container
 
-docker build -t symlink-1 . && docker run -p 8889:8080 -v /home/jb/dev/projects/wiremock/wiremock-symlinks/mount-files/:/home/wiremock --name wm-symlink --rm symlink-1 
+docker build -t symlink-1 . && docker run -p 8889:8080 -v $PWD/mount-files/:/home/wiremock --name wm-symlink --rm symlink-1 
 
 # URLS
 
